@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'scp main user@server:/path/to/deploy'  // Копирует собранный файл на сервер
+                sh 'scp main user@192.168.0.100:/path/to/deploy'  // Копирует собранный файл на сервер
                 sh 'ssh user@server "systemctl restart app"'  // Перезапускает сервис
             }
         }
