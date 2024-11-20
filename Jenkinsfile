@@ -3,17 +3,18 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building...'
+                sh 'go build -o main'  // Собирает бинарник с использованием Golang
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing...'
+                sh 'go test ./...'  // Запускает тесты для всех модулей
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
+                sh 'scp main user@server:/path/to/deploy'  // Копирует собранный файл на сервер
+                sh 'ssh user@server "systemctl restart app"'  // Перезапускает сервис
             }
         }
     }
