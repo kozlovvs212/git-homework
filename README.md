@@ -1,15 +1,42 @@
-# Домашнее задание по Git
+# Домашнее задание к занятию «Что такое DevOps. CI/CD»
 
-**Выполнил**: Козлов Виктор
+## Информация
+- **Имя и фамилия**: Иван Иванов
+- **Репозиторий GitHub**: [git-homework](https://github.com/kozlovvs212/git-homework)
 
 ---
 
-## Задания
+## Задание 1: Установка Jenkins, настройка проекта и сборка с Go
 
-### Задание 1
-https://github.com/kozlovvs212/git-homework/commit/b48780710c182950370f2d8d6fb9eb62a0c49b8b#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5
-### Задание 2
-https://github.com/kozlovvs212/git-homework/commit/08f07606aacb7b3b15659abfb0083f167f8a5c8c#diff-bc37d034bad564583790a46f19d807abfe519c5671395fd494d8cce506c42947
-### Задание 3
-https://github.com/kozlovvs212/git-homework/network
+### Описание задания:
+1. Установите Jenkins по инструкции из лекции или другим способом из официальной документации (без использования Docker).
+2. Установите на машину с Jenkins Golang.
+3. Сделайте форк репозитория и подключите его к Jenkins.
+4. Создайте проект Freestyle в Jenkins, подключите репозиторий и произведите запуск тестов и сборку проекта с помощью команд `go test .` и `docker build .`.
+   
+### Скриншоты:
+- Все скриншоты можно найти в [Google Документе с отчетом](https://docs.google.com/document/d/19etJQjT3vnVpEUP7-x8utFwq9A688qCaIEZPt4V0kh0/edit?usp=sharing).
+
 ---
+
+## Задание 2: Создание проекта Pipeline
+
+### Описание задания:
+1. Создайте новый проект Pipeline в Jenkins.
+2. Перепишите сборку из задания 1 в виде Declarative Pipeline.
+3. Добавьте код и скриншоты с настройками.
+
+### Скриншоты:
+- Все скриншоты можно найти в [Google Документе с отчетом](https://docs.google.com/document/d/19etJQjT3vnVpEUP7-x8utFwq9A688qCaIEZPt4V0kh0/edit?usp=sharing).
+
+---
+
+## Задание 3: Работа с Nexus
+
+### Описание задания:
+1. Установите Nexus и создайте репозиторий типа `raw-hosted`.
+2. Измените Pipeline, чтобы вместо Docker-образа собирался бинарный Go-файл. Используйте команду из Dockerfile.
+3. Загрузите файл в Nexus через Jenkins.
+
+### Скриншоты:
+- Все скриншоты можно найти в [Google Документе с отчетом](https://docs.google.com/document/d/19etJQjT3vnVpEUP7-x8utFwq9A688qCaIEZPt4V0kh0/edit?usp=sharing).
